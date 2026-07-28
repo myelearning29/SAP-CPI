@@ -54,6 +54,55 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "SOAP_TO_SOAP",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "{{Client_Secret}}",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "{{Client_ID}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Body>\r\n        <Add xmlns=\"http://tempuri.org/\">\r\n            <intA>60</intA>\r\n            <intB>25</intB>\r\n        </Add>\r\n    </soap:Body>\r\n</soap:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://d92996detrial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/cxf/soapRequest",
+          "protocol": "https",
+          "host": [
+            "d92996detrial",
+            "it-cpitrial06-rt",
+            "cfapps",
+            "us10-001",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "cxf",
+            "soapRequest"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
