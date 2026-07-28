@@ -1,0 +1,59 @@
+{
+  "info": {
+    "_postman_id": "3a136f4a-9895-4634-910b-dba7aa4ebbe4",
+    "name": "SAP_CPI_LEARNING_HUB_GITHUB",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23289640"
+  },
+  "item": [
+    {
+      "name": "WeatherAPP",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "{{Client_Secret}}",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "{{Client_ID}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cities\":\r\n    {\r\n        \"city\":\"Delhi\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://d92996detrial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/callWeatherAPIUsingLocalIntegrationProcess",
+          "protocol": "https",
+          "host": [
+            "d92996detrial",
+            "it-cpitrial06-rt",
+            "cfapps",
+            "us10-001",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "callWeatherAPIUsingLocalIntegrationProcess"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
